@@ -240,7 +240,7 @@ GET /api/users
 
 ---
 
-## 🔒 Concurrency Strategy
+## Concurrency Strategy
 
 ### The Problem
 
@@ -281,7 +281,7 @@ CONSTRAINT chk_wallet_balance CHECK (allow_negative = TRUE OR balance >= 0)
 
 ---
 
-## 🔑 Idempotency
+## Idempotency
 
 ### The Problem
 
@@ -312,7 +312,7 @@ curl -X POST /api/wallets/topup \
 
 ---
 
-## 📒 Double-Entry Ledger
+## Double-Entry Ledger
 
 Every transaction creates exactly **two ledger entries**:
 
@@ -351,7 +351,7 @@ Type: TOPUP
 
 ---
 
-## 🛡 Deadlock Avoidance
+## Deadlock Avoidance
 
 ### The Problem
 
@@ -376,7 +376,7 @@ Since every transaction acquires locks in the **same global order**, circular wa
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 
 ### Load & Concurrency Test
 
@@ -396,7 +396,7 @@ The load test verifies:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 wallet-service/
@@ -431,7 +431,7 @@ wallet-service/
 
 ---
 
-## 📝 Design Decisions
+## Design Decisions
 
 | Decision | Rationale |
 |----------|-----------|
