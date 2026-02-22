@@ -1,10 +1,10 @@
-# 💰 Wallet Service
+# Wallet Service
 
 A high-performance, production-grade wallet service built for gaming platforms and loyalty reward systems. Manages virtual currency balances with **ACID-compliant double-entry ledger** architecture, ensuring every credit is accounted for, even under heavy concurrent load.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Architecture Overview](#-architecture-overview)
 - [Tech Stack & Rationale](#-tech-stack--rationale)
@@ -21,7 +21,7 @@ A high-performance, production-grade wallet service built for gaming platforms a
 
 ---
 
-## 🏗 Architecture Overview
+## Architecture Overview
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -70,15 +70,15 @@ A high-performance, production-grade wallet service built for gaming platforms a
 
 ---
 
-## 🛠 Tech Stack & Rationale
+## Tech Stack & Rationale
 
 | Component | Choice | Why |
 |-----------|--------|-----|
-| **Runtime** | Node.js 20 | Excellent async I/O for handling many concurrent HTTP requests efficiently. Single-threaded event loop eliminates in-process race conditions. |
-| **Framework** | Express 4 | Battle-tested, minimal overhead, extensive middleware ecosystem. |
-| **Database** | PostgreSQL 16 | Industry-leading ACID compliance, `SELECT FOR UPDATE` row-level locking, `CHECK` constraints as safety nets, `JSONB` for flexible metadata. |
-| **DB Driver** | node-postgres (pg) | Direct access to PostgreSQL features — connection pooling, parameterized queries, and explicit transaction control. No ORM overhead. |
-| **Container** | Docker + Compose | One-command reproducible deployment with automatic database seeding. |
+| **Runtime** | Node.js 20 |
+| **Framework** | Express 4 |
+| **Database** | PostgreSQL 16 |
+| **DB Driver** | node-postgres (pg) |
+| **Container** | Docker + Compose |
 
 **Why not an ORM?** ORMs abstract away the precise control needed for correct financial transactions. Raw SQL with parameterized queries gives us explicit control over locking, transaction boundaries, and query optimization.
 
@@ -444,6 +444,3 @@ wallet-service/
 
 ---
 
-## License
-
-MIT
