@@ -72,15 +72,16 @@ A high-performance, production-grade wallet service built for gaming platforms a
 
 ## Tech Stack & Rationale
 
-| Component | Choice | Why |
-|-----------|--------|-----|
-| **Runtime** | Node.js 20 |
-| **Framework** | Express 4 |
-| **Database** | PostgreSQL 16 |
-| **DB Driver** | node-postgres (pg) |
-| **Container** | Docker + Compose |
+| Component | Choice |
+|-----------|--------|
+| **Runtime** | Node.js 20 
+| **Framework** | Express 4 
+| **Database** | PostgreSQL 16 
+| **DB Driver** | node-postgres (pg) 
+| **Container** | Docker + Compose 
 
-**Why not an ORM?** ORMs abstract away the precise control needed for correct financial transactions. Raw SQL with parameterized queries gives us explicit control over locking, transaction boundaries, and query optimization.
+**Why not an ORM?** 
+ORMs abstract away the precise control needed for correct financial transactions. Raw SQL with parameterized queries gives us explicit control over locking, transaction boundaries, and query optimization.
 
 ---
 
